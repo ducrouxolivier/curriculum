@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CV - One Page Print</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @media print {
+        @page { size: A4; margin: 8mm; }
+        html, body { height: auto; }
+        * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        body { font-size: 9.8pt; line-height: 1.2; }
+        h1 { font-size: 15.5pt; line-height: 1.05; }
+        h2 { font-size: 10.5pt; line-height: 1.12; margin: 0 0 1.5mm 0; }
+        .text-sm { font-size: 8.3pt !important; }
+        header .text-lg { font-size: 9.8pt !important; }
+        .print-root { max-width: 181mm !important; padding: 0 !important; }
+        img { width: 14mm !important; height: 14mm !important; }
+        header.grid { gap: 2px !important; }
+        .section-tight { margin-top: 2.5mm !important; }
+        ul { margin-top: 1.5mm !important; }
+        .footer { margin-top: 1.5mm !important; font-size: 7pt; }
+        .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+        .experience-list { columns: 1; column-gap: 0; }
+        .experience-entry { break-inside: avoid; margin: 0 0 1.4mm 0; }
+        .contact-block { font-size: 8.3pt; line-height: 1.1; }
+        .contact-block .space-y-1 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: 2px; }
+        /* Languages & Academic tightening */
+        .lang-acad { font-size: 7.8pt; line-height: 1.12; gap: 1px !important; }
+        .lang-acad h2 { font-size: 9pt; line-height: 1.05; margin: 0 0 0.8mm 0; padding-bottom: 0.4mm; }
+        .lang-acad ul { margin-top: 0.3mm !important; }
+        .lang-acad li { margin-top: 0.2mm !important; }
+        /* Technical skills tightening */
+        .skills-tight .space-y-2 > :not([hidden]) ~ :not([hidden]) { --tw-space-y-reverse: 0; margin-top: 2px; }
+        .skills-tight .grid { gap: 2px !important; }
+        .skills-tight .text-cyan-600 { font-size: 9pt !important; }
+        .skills-tight p { margin: 0; }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <div class="max-w-[800px] mx-auto p-4 print-root">
+      <header class="grid grid-cols-12 gap-3 items-center">
+        <div class="col-span-3 flex justify-center">
+          <img src="logo.jpg" alt="pic" class="w-20 h-20 rounded-full shadow" />
+        </div>
+        <div class="col-span-6 text-center">
+          <h1 class="text-3xl font-bold leading-tight">Olivier Ducroux</h1>
+          <p class="text-lg font-semibold text-green-600">Full Stack Engineer</p>
+        </div>
+        <div class="col-span-3 contact-block">
+          <div class="space-y-3">
+            <a href="mailto:ducrouxolivier@gmail.com" 
+               class="block text-gray-700 hover:text-blue-600 transition">
+              ducrouxolivier@gmail.com
+            </a>
+            <p class="text-gray-700">+33 7 50 94 61 90</p>
+            <a href="https://github.com/dm0lz" target="_blank" 
+               class="block text-gray-700 hover:text-blue-600 transition">
+              github.com/dm0lz
+            </a>
+          </div>
+        </div>
+        
+        
+      </header>
+
+      <section class="mt-2 section-tight skills-tight">
+        <h2 class="font-bold border-b border-gray-300 pb-1">Technical Skills</h2>
+        <div class="grid grid-cols-2 gap-2 mt-1 text-sm">
+          <div class="space-y-2">
+            <div class="avoid-break">
+              <p class="text-cyan-600 font-semibold">Programming Languages</p>
+              <p class="text-gray-700">Ruby, Javascript, Python</p>
+            </div>
+            <div class="avoid-break">
+              <p class="text-cyan-600 font-semibold">Backend Frameworks</p>
+              <p class="text-gray-700">Ruby on Rails, Express, Flask, Serverless Framework</p>
+            </div>
+            <div class="avoid-break">
+              <p class="text-cyan-600 font-semibold">Project Management</p>
+              <p class="text-gray-700">Agile, Scrum, JIRA, Pivotal Tracker, Asana</p>
+            </div>
+            <div class="avoid-break">
+              <p class="text-cyan-600 font-semibold">Testing</p>
+              <p class="text-gray-700">Rspec, Jest, Cypress, TDD, CI</p>
+            </div>
+            <div class="avoid-break">
+              <p class="text-cyan-600 font-semibold">Front-End/Design</p>
+              <p class="text-gray-700">HTML5, CSS3, Bootstrap, Semantic UI, Foundation, Tailwind</p>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="avoid-break">
+              <p class="text-cyan-600 font-semibold">SysAdmin & DevOps</p>
+              <p class="text-gray-700">Linux, Docker, Kubernetes, GCP, AWS, Kamal</p>
+            </div>
+            <div class="avoid-break">
+              <p class="text-cyan-600 font-semibold">Frontend Libraries</p>
+              <p class="text-gray-700">jQuery, React, Angular, Hotwire, Stimulus</p>
+            </div>
+            <div class="avoid-break">
+              <p class="text-cyan-600 font-semibold">Artificial Intelligence</p>
+              <p class="text-gray-700">Tensorflow, Pytorch, LLMs, Vector DBs, RAG, Tool Calling</p>
+            </div>
+            <div class="avoid-break">
+              <p class="text-cyan-600 font-semibold">Databases</p>
+              <p class="text-gray-700">PostgreSQL, MongoDB, MySQL, Redis, Qdrant</p>
+            </div>
+            <div class="avoid-break">
+              <p class="text-cyan-600 font-semibold">Mobile</p>
+              <p class="text-gray-700">React Native, Ionic, Cordova, Phonegap</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-2 section-tight">
+        <h2 class="font-bold border-b border-gray-300 pb-1">Experience</h2>
+        <div class="mt-1 text-sm experience-list">
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Frontend Engineer — Next.js, React, Typescript</p>
+                <p class="text-gray-700">Create and manage SPL Token on Solana blockchain</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">08/2025 - Now</p>
+                <a href="https://www.create-spl-token.fun/" target="_blank" class="text-green-600 text-xs">create-spl-token.fun</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Full Stack RoR & DevOps — Rails, Hotwire, Postgres, Playwright, Kubernetes</p>
+                <p class="text-gray-700">All-in-one SEO & Web Intelligence Toolkit API</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">01/2025 - Now</p>
+                <a href="https://www.fetchserp.com/" target="_blank" class="text-green-600 text-xs">fetchserp.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Full Stack Engineer — Rails, React, Postgres, Rspec, AWS</p>
+                <p class="text-gray-700">Radiology booking platform</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">10/2021 - 10/2024</p>
+                <a href="https://scan.com/" target="_blank" class="text-green-600 text-xs">scan.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Full Stack Engineer — Rails, jQuery, React, MySQL, Rspec</p>
+                <p class="text-gray-700">Inbound marketing platform</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">02/2019 - 04/2021</p>
+                <a href="https://neocamino.com/" target="_blank" class="text-green-600 text-xs">neocamino.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Full Stack Engineer — Node, Serverless, Solidity, MongoDB, NLP, React, Redux</p>
+                <p class="text-gray-700">Decentralized travel marketplace</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">12/2017 - 01/2019</p>
+                <a href="https://please.com/" target="_blank" class="text-green-600 text-xs">please.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Backend Engineer — Rails, Postgres, MongoDB, Sidekiq, Docker, K8s, Distributed</p>
+                <p class="text-gray-700">Middlewares enabling comms with external providers</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">12/2017 - 01/2019</p>
+                <a href="https://dmates.io" target="_blank" class="text-green-600 text-xs">dmates.io</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Frontend Engineer — Angular 4</p>
+                <p class="text-gray-700">Cyber Threat Intelligence Platform v2</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">01/2017 - 05/2017</p>
+                <a href="https://outpost24.com" target="_blank" class="text-green-600 text-xs">outpost24.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Full Stack Engineer — Rails, Postgres, jQuery, React, Proxmox</p>
+                <p class="text-gray-700">Driving licence platform</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">12/2014 - 10/2016</p>
+                <a href="https://permigo.com" target="_blank" class="text-green-600 text-xs">permigo.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Full Stack Engineer — Rails, MySQL, jQuery, Angular</p>
+                <p class="text-gray-700">Energy monitoring platform</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">05/2014 - 11/2014</p>
+                <a href="https://epices-energie.fr" target="_blank" class="text-green-600 text-xs">epices-energie.fr</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Full Stack Engineer — Rails, MySQL, jQuery</p>
+                <p class="text-gray-700">Marketing platform (coupon code)</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">02/2014 - 05/2014</p>
+                <a href="https://27stars.co.uk" target="_blank" class="text-green-600 text-xs">27stars.co.uk</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Full Stack Engineer — Rails, MongoDB, Resque/Redis, AngularJS</p>
+                <p class="text-gray-700">Push Messaging platform</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">10/2013 - 02/2014</p>
+                <a href="https://sysdivision.com/" target="_blank" class="text-green-600 text-xs">sysdivision.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Ruby & JS Developer — Freelance</p>
+                <p class="text-gray-700">Various roles (oDesk, Elance, Freelancer)</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">02/2013 - 10/2013</p>
+              </div>
+            </div>
+          </div>
+          <div class="experience-entry">
+            <div class="grid grid-cols-12 gap-2 avoid-break">
+              <div class="col-span-9">
+                <p class="text-cyan-600 font-semibold">Ruby Developer — Ruby, Sinatra, MongoDB, Redis</p>
+                <p class="text-gray-700">Social marketing platform</p>
+              </div>
+              <div class="col-span-3 text-right">
+                <p class="font-medium">07/2012 - 02/2013</p>
+                <a href="https://tiempy.com/" target="_blank" class="text-green-600 text-xs">tiempy.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-2 section-tight lang-acad">
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <h2 class="font-bold border-b border-gray-300 pb-1">Languages</h2>
+            <ul class="mt-1 text-sm space-y-1">
+              <li>French — Native proficiency</li>
+              <li>English — Full professional proficiency</li>
+              <li>Spanish — Full professional proficiency</li>
+              <li>German — Limited professional proficiency</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="font-bold border-b border-gray-300 pb-1">Academic</h2>
+            <ul class="mt-1 text-sm space-y-1">
+              <li class="flex justify-between"><span>Self-taught</span><span>2010 - Now</span></li>
+              <li class="flex justify-between"><span>BTS IG — Computer Science</span><span>2010 - 2011</span></li>
+              <li class="flex justify-between"><span>ENSM — Eng., Navigation</span><span>2007 - 2009</span></li>
+              <li class="flex justify-between"><span>Univ. Lyon 1 — Physics</span><span>2006 - 2007</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </body>
+</html>
